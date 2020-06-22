@@ -1,3 +1,4 @@
+#2020  Giulentino  - Barbut pentru toti romanii
 import random
 optiune=int(input("⚀ La mai mica - apasa 1" "\n" "⚅ La mai mare - apasa 2" "\n" "  ""Iesi - apasa 0" "\nAlege:"))
 
