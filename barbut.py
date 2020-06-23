@@ -14,7 +14,7 @@ sarezaru4=sarezaru=random.randint(1, 6)
 def zartimp():
     for i in range(101):
         time.sleep(0.005)
-        print('Se rotesc zarurile  [%d%%]\r'%i, end="")
+        print('Se rotesc zarurile  %d%%\r'%i, end="")
     print('\n')
 
 ###fct la mai mica
