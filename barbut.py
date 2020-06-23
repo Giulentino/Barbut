@@ -1,11 +1,21 @@
 #2020  Giulentino  - Barbut pentru toti romanii
+
 import random
+import time
 optiune=int(input("⚀ La mai mica - apasa 1" "\n" "⚅ La mai mare - apasa 2" "\n" "  ""Iesi - apasa 0" "\nAlege:"))
 
 sarezaru1=random.randint(1, 6)
 sarezaru2=random.randint(1, 6)
 sarezaru3=sarezaru=random.randint(1, 6)
 sarezaru4=sarezaru=random.randint(1, 6)
+
+
+#fct timp zar
+def zartimp():
+    for i in range(101):
+        time.sleep(0.005)
+        print('Se rotesc zarurile  [%d%%]\r'%i, end="")
+    print('\n')
 
 ###fct la mai mica
 def zaru1jucator():
@@ -142,7 +152,8 @@ while True:
         zar2_jucator1 = sarezaru2
         zaru2jucator()
         sum_zar_jucator1=zar1_jucator1+zar2_jucator1
-        print("Ai dat:", logozar1, "+", logozar2," ", sum_zar_jucator1)
+        zartimp()
+        print("Ai dat:", logozar1, "+", logozar2," ", sum_zar_jucator1,"\n")
         #print("Ai dat:", sum_zar_jucator1)
 
         #calculator
@@ -151,7 +162,8 @@ while True:
         zar2_calculator = sarezaru4
         zaru2calculator()
         sum_zar_calculator=zar1_calculator+zar2_calculator
-        print("Calculatorul a dat:", logozar3, "+", logozar4," ",sum_zar_calculator)
+        
+        print("Calculatoru a dat:", logozar3, "+", logozar4," ",sum_zar_calculator,"\n")
 
         #conditie castig
         if sum_zar_jucator1 < sum_zar_calculator:
@@ -173,7 +185,8 @@ while True:
         zaru4jucator()
         
         sum_zar_jucator1=zar1_jucator1+zar2_jucator1
-        print("Ai dat:",logozar5,"+",logozar6," ", sum_zar_jucator1)
+        zartimp()
+        print("Ai dat:",logozar5,"+",logozar6," ", sum_zar_jucator1,"\n")
         
         
         #calculator
@@ -184,16 +197,17 @@ while True:
         zar2_calculator = sarezaru4
         zaru6calculator()
         sum_zar_calculator=zar1_calculator+zar2_calculator
-        print("Calculatoru a dat:", logozar7,"+", logozar8," ", sum_zar_calculator )
+        
+        print("Calculatoru a dat:", logozar7,"+", logozar8," ", sum_zar_calculator,"\n")
         
         
         #conditie castig
         if sum_zar_jucator1 > sum_zar_calculator:
-            print("Ai castigat.")
+            print("Ai castigat.","\n")
         elif sum_zar_calculator == sum_zar_jucator1:
-            print("Egalitate mai da o data")
+            print("Egalitate mai da o data.")
         else:
-            print ("Te-a facut calculatoru. N-ai talent la zaruri")
+            print ("Te-a facut calculatoru. N-ai talent la zaruri.","\n")
         break
     
     elif optiune != 1 and optiune !=2:
